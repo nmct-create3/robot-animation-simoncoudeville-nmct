@@ -139,58 +139,17 @@ body {
 */
 
 .robot {
-  --robot-animation-duration: 0.75s;
-  --robot-animation-timing-function: ease-in-out;
-  --robot-animation-iteration-count: infinite;
-  --robot-animation-direction: alternate;
-  --robot-animation-play-state: running;
   max-width: 350px;
 }
 
 .robot__body {
   fill: var(--global-color-front);
-  animation-name: robotHover;
-  animation-duration: var(--robot-animation-duration);
-  animation-timing-function: var(--robot-animation-timing-function);
-  animation-iteration-count: var(--robot-animation-iteration-count);
-  animation-direction: var(--robot-animation-direction);
-  animation-play-state: var(--robot-animation-play-state);
 }
 
 .robot__shadow {
   fill: #000;
   opacity: .1;
   transform-origin: 50% 100%;
-  animation-name: shadowPulse;
-  animation-duration: var(--robot-animation-duration);
-  animation-timing-function: var(--robot-animation-timing-function);
-  animation-iteration-count: var(--robot-animation-iteration-count);
-  animation-direction: var(--robot-animation-direction);
-  animation-play-state: var(--robot-animation-play-state);
-}
-
-@keyframes shadowPulse {
-  100% {
-    transform: scale(0.75);
-  }
-}
-
-@keyframes robotHover {
-  0% {
-    transform: translateY(2%);
-  }
-
-  100% {
-    transform: translateY(-2%);
-  }
-}
-
-input:checked+.robot {
-  --robot-animation-play-state: paused;
-}
-
-body:has(input:checked) .robot {
-  --robot-animation-play-state: paused;
 }
 
 /*
